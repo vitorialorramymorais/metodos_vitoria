@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Conversor de Moedas- Vitória</title>
+    </body>
+
+</html>
+</head>
+
+<body>
+    <h1>Conversor de Moeda</h1>
+    <label for="amount">Valor em Dólares:</label>
+    <input type="text" id="amount">
+    <button onclick="converterMoeda()">Converter</button>
+    <p id="result"></p>
+
+    <script>
+        function converterMoeda() {
+            const usdAmount = parseFloat(document.getElementById('amount').value);
+            const exchangeRate = 5.25; // Taxa de câmbio fictícia
+            const convertedAmount = usdAmount * exchangeRate;
+            document.getElementById('result').textContent = `Valor convertido: R$ ${convertedAmount.toFixed(2)}`;
+        }
+    </script>
+</body>
+
+</html>
